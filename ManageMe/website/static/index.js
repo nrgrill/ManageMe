@@ -1,5 +1,5 @@
 function deleteNote(noteId) {
-  fetch("/delete-note", {
+  fetch("/delete-task", {
     method: "POST",
     body: JSON.stringify({ noteId: noteId }),
   }).then((_res) => {
