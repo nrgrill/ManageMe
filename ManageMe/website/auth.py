@@ -64,3 +64,8 @@ def sign_up():
             return redirect(url_for('views.home'))
 
     return render_template("sign_up.html", user=current_user)
+
+@auth.route('/calendar', methods=['GET', 'POST'])
+def calendar():
+
+    return render_template("calendar.html", user=current_user)
