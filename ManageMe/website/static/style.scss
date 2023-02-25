@@ -21,7 +21,11 @@
 
   //schedule template
   --schedule-rows-number: 19;
+<<<<<<< Updated upstream
   --schedule-rows-height: 10px;
+=======
+  --schedule-rows-height: 50px;
+>>>>>>> Stashed changes
 }
 
 body {
@@ -129,7 +133,11 @@ a {
 
   	@include breakpoint(lg) {
   		width: calc(100% - 60px); // 60px is the .cd-schedule__timeline > li::after element left
+<<<<<<< Updated upstream
   		margin-left: 0px;
+=======
+  		margin-left: 60px;
+>>>>>>> Stashed changes
   	}
   }
 }
@@ -155,7 +163,11 @@ a {
   position: relative;
   padding: 0 var(--component-padding);
   display: flex;
+<<<<<<< Updated upstream
   overflow-x: hidden;
+=======
+  overflow-x: scroll;
+>>>>>>> Stashed changes
   -webkit-overflow-scrolling: touch;
 
   &::after { // never visible - used to add a right padding to .cd-schedule__group > ul
@@ -170,7 +182,11 @@ a {
   .js & {
     @include breakpoint(md) {
       height: calc(var(--schedule-rows-height)*var(--schedule-rows-number));
+<<<<<<< Updated upstream
       overflow: hidden;
+=======
+      overflow: visible;
+>>>>>>> Stashed changes
       padding: 0;
 
       &::after { // reset style
