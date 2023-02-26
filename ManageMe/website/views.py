@@ -15,26 +15,41 @@ def welcome():
 def home():
     if request.method == 'POST': 
         task = request.form.get('task')#Gets the task from the HTML 
+        startTime = request.form.get('starttime')
+        endTime = request.form.get('endtime')
+        day = request.form.get('day')
 
         if len(task) < 1:
             flash('Task is too short!', category='error') 
+        
+        elif len(startTime) < 1:
+            flash('Task is too short!', category='error') 
+
+        elif len(endTime) < 1:
+            flash('Task is too short!', category='error') 
+
+        elif len(day) < 1:
+            flash('Task is too short!', category='error') 
+
         else:
             new_note = Task(data=task, user_id=current_user.id)  #providing the schema for the task 
             db.session.add(new_note) #adding the task to the database 
             db.session.commit()
-            flash('Task added!', category='success')
-            '''
-        startTime = request.form.get('starttime')
 
-        if len(startTime < 1):
-            flash('Start time is too short!', category='error') 
-
-        else:
             new_start = StartTime(data = startTime, user_id=current_user.id)
+            new_end = EndTime(data = endTime, user_id=current_user.id)
+            new_day = Day(data = day, user_id=current_user.id)
+
+            db.session.add(new_note)
             db.session.add(new_start)
-            db.session.commit()
-            flash('Start time added!', category='success')
-'''
+            db.session.add(new_end)
+            db.session.add(new_day)
+            
+            db.commit()
+
+            flash('Task added!', category='success')
+        
+
 
     return render_template("home.html", user=current_user)
 
