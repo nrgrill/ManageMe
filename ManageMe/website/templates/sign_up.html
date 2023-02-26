@@ -1,51 +1,59 @@
-{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
-content %}
-<div class = "container">
+{% extends "base.html" %} 
+{% block title %}Sign Up{% endblock %} 
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="container" style="background-color: rgb(255, 226, 165); padding: 20px; border-radius: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.2);">
   <form method="POST">
-    <br />
-    <h3 align="center">Sign Up</h3>
+    <h3 align="center" style="color:rgb(0, 0, 0);text-align:center; margin-bottom: 20px;">Sign Up</h3>
     <div class="form-group">
-      <label for="email">Email Address</label>
+      <label for="email" style="color: rgb(0, 0, 0);">Email Address</label>
       <input
         type="email"
         class="form-control"
         id="email"
         name="email"
         placeholder="Enter email"
+        style="border-radius: 10px; border-color: rgb(255, 174, 0);"
       />
     </div>
     <div class="form-group">
-      <label for="firstName">First Name</label>
+      <label for="firstName" style="color: rgb(0, 0, 0);">First Name</label>
       <input
         type="text"
         class="form-control"
         id="firstName"
         name="firstName"
         placeholder="Enter first name"
+        style="border-radius: 10px; border-color: rgb(255, 174, 0);"
       />
     </div>
     <div class="form-group">
-      <label for="password1">Password</label>
+      <label for="password1" style="color: rgb(0, 0, 0);">Password</label>
       <input
         type="password"
         class="form-control"
         id="password1"
         name="password1"
         placeholder="Enter password"
+        style="border-radius: 10px; border-color: rgb(255, 174, 0);"
       />
     </div>
     <div class="form-group">
-      <label for="password2">Password (Confirm)</label>
+      <label for="password2" style="color: rgb(0, 0, 0);">Password (Confirm)</label>
       <input
         type="password"
         class="form-control"
         id="password2"
         name="password2"
         placeholder="Confirm password"
+        style="border-radius: 10px; border-color: rgb(255, 174, 0);"
       />
     </div>
     <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" style="background-color: rgb(255, 174, 0); border-color: rgb(255, 174, 0); border-radius: 10px;">Submit</button>
   </form>
 </div>
 {% endblock %}

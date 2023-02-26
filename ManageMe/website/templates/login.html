@@ -1,30 +1,36 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content%}
-<div class = "container">
+{% extends "base.html" %} 
+{% block title %}Login{% endblock %} 
+{% block content%}
+<br>
+<br>
+<br>
+<div class="container" style="background-color: rgb(255, 226, 165); padding: 20px; border-radius: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.2);">
 	<form method="POST">
-		<br>
 		<div class="form-group">
-		  <h3 align="center">Login</h3>
-		  <label for="email">Email Address</label>
+		  <h3 align="center" style="color:rgb(0, 0, 0);text-align:center; margin-bottom: 20px;">Login</h3>
+		  <label for="email" style="color: rgb(0, 0, 0);">Email Address</label>
 		  <input
 			type="email"
 			class="form-control"
 			id="email"
 			name="email"
 			placeholder="Enter email"
+			style="border-radius: 10px; border-color: rgb(255, 174, 0);"
 		  />
 		</div>
 		<div class="form-group">
-		  <label for="password">Password</label>
+		  <label for="password" style="color: rgb(0, 0, 0);">Password</label>
 		  <input
 			type="password"
 			class="form-control"
 			id="password"
 			name="password"
 			placeholder="Enter password"
+			style="border-radius: 10px; border-color: rgb(255, 174, 0);"
 		  />
 		</div>
 		<br />
-		<button type="submit" class="btn btn-primary">Login</button>
+		<button type="submit" class="btn btn-primary" style="background-color: rgb(255, 174, 0); border-color: rgb(255, 174, 0); border-radius: 10px;">Login</button>
 	</form>
 </div>
 
