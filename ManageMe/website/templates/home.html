@@ -1,24 +1,24 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
-<br />
-<h1 align="center">Tasks</h1>
-<br />
-<ul class="list-group list-group-flush" id="tasks">
-  {% for task in user.tasks %}
-  <li class="list-group-item">
-    {{ task.data }}
-    <button type="button" class="close" onClick="deleteNote({{ task.id }})">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </li>
-  {% endfor %}
-</ul>
-<form method="POST">
-  <textarea name="task" id="task" class="form-control"></textarea>
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
+<div class = "container">
   <br />
-  <div align="center">
-    <button type="submit" class="btn btn-primary">Add Task</button>
-  </div>
-</form>
-{% endblock %};
-
+  <h1 align="center" style="color:rgb(255, 174, 0); text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">Tasks</h1>
+  <br />
+  <ul class="list-group list-group-flush" id="tasks">
+    {% for task in user.tasks %}
+    <li class="list-group-item" style="background-color:rgb(255, 226, 165); border-radius:10px; box-shadow: 0 5px 10px rgba(0,0,0,0.2);">
+      {{ task.data }}
+      <button type="button" class="close" onClick="deleteNote({{ task.id }})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+  <form method="POST" style="margin-top:20px;">
+    <textarea name="task" id="task" class="form-control" style="border-radius:10px; border-color:rgb(255, 174, 0);"></textarea>
+    <br />
+    <div align="center">
+      <button type="submit" class="btn btn-primary" style="background-color:rgb(255, 174, 0); border-color:rgb(255, 174, 0); border-radius:10px;">Add Task</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
