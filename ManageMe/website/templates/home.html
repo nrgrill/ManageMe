@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
 <h1 align="center">Tasks</h1>
+<br />
 <ul class="list-group list-group-flush" id="tasks">
   {% for task in user.tasks %}
   <li class="list-group-item">
