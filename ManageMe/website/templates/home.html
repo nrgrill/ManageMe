@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
+<br />
 <h1 align="center">Tasks</h1>
 <br />
 <ul class="list-group list-group-flush" id="tasks">
@@ -12,8 +13,7 @@
   </li>
   {% endfor %}
 </ul>
-<fo           
-rm method="POST">
+<form method="POST">
   <textarea name="task" id="task" class="form-control"></textarea>
   <br />
   <div align="center">
