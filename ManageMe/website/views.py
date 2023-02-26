@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
-from .models import Task
+from .models import Task, StartTime, EndTime, Day
 from . import db
 import json
 
@@ -23,6 +23,18 @@ def home():
             db.session.add(new_note) #adding the task to the database 
             db.session.commit()
             flash('Task added!', category='success')
+            '''
+        startTime = request.form.get('starttime')
+
+        if len(startTime < 1):
+            flash('Start time is too short!', category='error') 
+
+        else:
+            new_start = StartTime(data = startTime, user_id=current_user.id)
+            db.session.add(new_start)
+            db.session.commit()
+            flash('Start time added!', category='success')
+'''
 
     return render_template("home.html", user=current_user)
 

@@ -1,29 +1,59 @@
 {% extends "base.html" %} {% block title %}Create{% endblock %} {% block content %}
-<div class = "container">
-  <br />
-  <h1 align="center" style="color:rgb(255, 226, 165); text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">Tasks</h1>
-  <br />
-  <ul class="list-group list-group-flush" id="tasks">
-    {% for task in user.tasks %}
-    <li class="list-group-item" style="background-color:rgb(255, 226, 165); border-radius:10px; box-shadow: 0 5px 10px rgba(0,0,0,0.2);">
-      {{ task.data }}
-      <button type="button" class="close" onClick="deleteNote({{ task.id }})">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </li>
-    {% endfor %}
-  </ul>
-  <form method="POST" style="margin-top:20px;">
-    <textarea name="task" id="task" class="form-control" style="border-radius:10px; border-color:rgb(255, 174, 0);"></textarea>
+<div class="container">
     <br />
+    <h1 align="center" style="color:rgb(255, 226, 165); text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">Tasks</h1>
+    <br />
+    <ul class="list-group list-group-flush" id="tasks">
+        {% for task in user.tasks %}
+        <li class="list-group-item" style="background-color:rgb(255, 226, 165); border-radius:10px; box-shadow: 0 5px 10px rgba(0,0,0,0.2);">
+            {{ task.data }}
+            <button type="button" class="close" onClick="deleteNote({{ task.id }})">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+    <form method="POST" style="margin-top:5px;">
+        <textarea name="task" id="task" class="form-control" style="border-radius:5px; border-color:rgb(255, 174, 0);"></textarea>
+        <div align="center">
+            <button type="submit" class="btn btn-primary" style="background-color:rgb(255, 174, 0); border-color:rgb(255, 174, 0); border-radius:10px;">Add Task</button>
+        </div>
+        <br />
+    </form>
+
+    <form method="POST" style="margin-top:5px;">
+        <textarea name="starttime" id="starttime" class="form-control" style="border-radius:5px; border-color:rgb(255, 174, 0);"></textarea>
+        <div align="center">
+            <button type="submit" class="btn btn-primary" style="background-color:rgb(255, 174, 0); border-color:rgb(255, 174, 0); border-radius:10px;">
+                Add Start Time
+            </button>
+        </div>
+        <br />
+    </form>
+
+    <form method="POST" style="margin-top:5px;">
+        <textarea name="endtime" id="endtime" class="form-control" style="border-radius:5px; border-color:rgb(255, 174, 0);"></textarea>
+        <div align="center">
+            <button type="submit" class="btn btn-primary" style="background-color:rgb(255, 174, 0); border-color:rgb(255, 174, 0); border-radius:10px;">
+                Add End Time
+            </button>
+        </div>
+        <br />
+    </form>
+
+    <form method="POST" style="margin-top:5px;">
+        <textarea name="day" id="day" class="form-control" style="border-radius:5px; border-color:rgb(255, 174, 0);"></textarea>
+        <div align="center">
+            <button type="submit" class="btn btn-primary" style="background-color:rgb(255, 174, 0); border-color:rgb(255, 174, 0); border-radius:10px;">
+                Day
+            </button>
+        </div>
+        <br />
+    </form>
+
     <div align="center">
-        <button type="submit" class="btn btn-primary" style="background-color:rgb(255, 174, 0); border-color:rgb(255, 174, 0); border-radius:10px;">Add Task</button>
+        <br />
+        <button onclick="window.location.href ='calendar'" class="btn btn-primary" style="background-color:rgb(255, 174, 0); border-color:rgb(255, 174, 0); border-radius:10px;">Finalize</button>
     </div>
-    
-  </form>
-  <div align ="center">
-      <br />
-      <button onclick="window.location.href ='calendar'" class="btn btn-primary" style="background-color:rgb(255, 174, 0); border-color:rgb(255, 174, 0); border-radius:10px;">Finalize</button>
-  </div>
 </div>
 {% endblock %}
