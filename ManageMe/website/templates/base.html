@@ -19,6 +19,12 @@
       href="{{ url_for('static', filename='style.css') }}"
       crossorigin="anonymous"
       />
+
+      <link 
+      rel="stylesheet" 
+      href="{{ url_for('static', filename='HomeCSS.css') }}"
+      crossorigin="anonymous"
+      />
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
@@ -93,5 +99,5 @@
   }
 </script>
 {% endblock %}
-  </body>
+</body>
 </html>

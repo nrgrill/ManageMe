@@ -1,72 +1,65 @@
-{% extends "base.html" %} {% block title %}Welcome{% endblock %} {% block content%}
+{% extends "base.html" %}{% block title %}Welcome{% endblock %}{% block content%}
 <html>
 <head>
-	<title>Split Screen with Heading</title>
-	<style>
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
-			height: 100vh;
-			overflow: hidden;
-			box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-			border-radius: 20px;
-		}
-		.heading {
-			font-size: 24px;
-			margin-bottom: 20px;
-			text-align: center;
-			text-shadow: 0 2px 5px rgba(0,0,0,0.2);
-		}
-		.inner-container {
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
-			max-width: 1200px;
-			height: calc(100vh - 100px);
-			margin-top: 20px;
-			margin-bottom: 20px;
-			border-radius: 20px;
-			box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-			overflow: hidden;
-		}
-		.left-side, .right-side {
-			flex: 1;
-			height: 100%;
-			overflow-y: hidden;
-			padding: 10px;
-			border-top-left-radius: 20px;
-			border-bottom-left-radius: 20px;
-		}
-		.left-side {
-			background-color: rgb(255, 226, 165);
-			border-top-left-radius: 20px;
-			border-bottom-left-radius: 20px;
-		}
-		.right-side {
-			background-color: rgb(255, 226, 165);
-			margin-left: 150px;
-			border-top-right-radius: 20px;
-			border-bottom-right-radius: 20px;
-		}
-	</style>
+    <title>Split Screen with Heading</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .inner-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            height: calc(100vh - 100px);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .left-side, .right-side {
+            flex: 1;
+            height: 100%;
+            overflow-y: hidden;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .left-side {
+            background-color: rgb(255, 226, 165);
+            margin-right: 200px;
+        }
+        .right-side {
+            background-color: rgb(255, 226, 165);
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<div class="heading">
-			<H2 align ="center" style="color:rgb(255, 174, 0);text-align:center;">ManageMe</H2>
-		</div>
-		<div class="inner-container">
-			<div class="left-side">
-				<p>hiasdasdasdasdadasasdasdsa</p>
-			</div>
-			<div class="right-side">
-				<p>hiasdasdasdasdadasasdasdsa</p>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="heading">
+            <H2 align ="center" style="color:rgb(255, 174, 0);text-align:center;">ManageMe</H2>
+        </div>
+        <div class="inner-container">
+            <div class="left-side">
+                <p>hiasdasdasdasdadasasdasdsa</p>
+            </div>
+            <div class="right-side">
+                <p>hiasdasdasdasdadasasdasdsa</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 {% endblock %}
