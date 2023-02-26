@@ -6,7 +6,6 @@ import json
 
 views = Blueprint('views', __name__)
 
-
 @views.route('/', methods=['GET', 'POST'])
 def welcome():
     return render_template("welcome.html", user=current_user)
