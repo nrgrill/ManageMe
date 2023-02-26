@@ -25,24 +25,21 @@
 		  <li><span>18:00</span></li>
 		</ul>
 	  </div> <!-- .cd-schedule__timeline -->
-	
 	  <div class="cd-schedule__events">
 		<ul>
 		  <li class="cd-schedule__group">
 			<div class="cd-schedule__top-info" style = "color:rgb(255, 226, 165);" ><span>Monday</span></div>
-	
 			<ul>
 			  <li class="cd-schedule__event">
-				<a data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1" href="#0">
+				<a data-start={{user.stimes[0].data}} data-end={{user.etimes[0].data}} data-content="event-abs-circuit" data-event="event-1" href="#0">
 				  <em class="cd-schedule__name">{{user.tasks[0].data}}</em>
 				</a>
 			  </li>
 			  <li class="cd-schedule__event">
-				<a data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2" href="#0">
+				<a data-start={{user.stimes[1].data}} data-end={{user.etimes[1].data}} data-content="event-rowing-workout" data-event="event-2" href="#0">
 				  <em class="cd-schedule__name">{{user.tasks[1].data}}</em>
 				</a>
 			  </li>
-	
 			  <li class="cd-schedule__event">
 				<a data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3" href="#0">
 				  <em class="cd-schedule__name">Chem Lecture</em>
@@ -50,23 +47,19 @@
 			  </li>
 			</ul>
 		  </li>
-	
 		  <li class="cd-schedule__group">
 			<div class="cd-schedule__top-info" style = "color:rgb(255, 226, 165);"><span>Tuesday</span></div>
-	
 			<ul>
 			  <li class="cd-schedule__event">
 				<a data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2" href="#0">
 				  <em class="cd-schedule__name">Finish up code for CS 1021</em>
 				</a>
 			  </li>
-	
 			  <li class="cd-schedule__event">
 				<a data-start="11:30" data-end="13:00"  data-content="event-restorative-yoga" data-event="event-4" href="#0">
 				  <em class="cd-schedule__name">Study for calc exam</em>
 				</a>
 			  </li>
-	
 			  <li class="cd-schedule__event">
 				<a data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1" href="#0">
 				  <em class="cd-schedule__name">Workout</em>
