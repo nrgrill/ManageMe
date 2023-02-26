@@ -6,3 +6,7 @@ function deleteNote(noteId) {
     window.location.href = "/";
   });
 }
+
+function calendar() {
+    window.location.href = "/calendar";
+};
