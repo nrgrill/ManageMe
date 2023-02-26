@@ -18,24 +18,23 @@ def home():
         startTime = request.form.get('starttime')
         endTime = request.form.get('endtime')
         day = request.form.get('day')
-
+        
+        
+        
         if len(task) < 1:
             flash('Task is too short!', category='error') 
-        
+
         elif len(startTime) < 1:
-            flash('Task is too short!', category='error') 
+            flash('Start time is too short!', category='error') 
 
         elif len(endTime) < 1:
-            flash('Task is too short!', category='error') 
-
+            flash('End time is too short!', category='error') 
+        
         elif len(day) < 1:
-            flash('Task is too short!', category='error') 
+            flash('Day is too short!', category='error')
 
         else:
-            new_note = Task(data=task, user_id=current_user.id)  #providing the schema for the task 
-            db.session.add(new_note) #adding the task to the database 
-            db.session.commit()
-
+            new_note = Task(data=task, user_id=current_user.id)
             new_start = StartTime(data = startTime, user_id=current_user.id)
             new_end = EndTime(data = endTime, user_id=current_user.id)
             new_day = Day(data = day, user_id=current_user.id)
@@ -45,7 +44,9 @@ def home():
             db.session.add(new_end)
             db.session.add(new_day)
             
-            db.commit()
+            db.session.commit()
+            
+            
 
             flash('Task added!', category='success')
         
@@ -55,10 +56,10 @@ def home():
 
 
 @views.route('/delete-task', methods=['POST'])
-def delete_note():  
+def delete_task():  
     task = json.loads(request.data) # this function expects a JSON from the INDEX.js file 
-    noteId = task['noteId']
-    task = Task.query.get(noteId)
+    taskId = task['taskId']
+    task = Task.query.get(taskId)
     if task:
         if task.user_id == current_user.id:
             db.session.delete(task)

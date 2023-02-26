@@ -2,32 +2,39 @@
 {% block title %}Create{% endblock %}
 {% block content %}
 <div class="container">
+    <ul class="list-group list-group-flush" id="tasks">
+        {% for task in user.tasks %}
+        <li class="list-group-item">
+            {{ task.data }}
+            <button type="button" class="close" onClick="deleteTask({{ task.id }})">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
     <br>
     <h1 align="center" style="color:rgb(255, 226, 165); text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">Create A Task</h1>
     <br>
-    <form method="POST" style="height: 45; margin: 0 auto;">
-        <h2 style="color:rgb(255, 226, 165); text-align:center;">Task</h2>
-        <textarea name="task" id="task" class="form-control task-textarea" style = "height: 45px"></textarea>
-        <br>
+    <form method="POST"; margin: 0 auto;">
+            <h2 style="color:rgb(255, 226, 165); text-align:center;">Task</h2>
+            <textarea name="task" id="task" class="form-control task-textarea" style="height: 45px"></textarea>
+            <br>
+    
+            <h2 style="color:rgb(255, 226, 165); text-align:center;">Starting Time</h2>
+            <textarea name="starttime" id="starttime" class="form-control task-textarea" style="height: 45px"></textarea>
+            <br>
+        <
+            <h2 style="color:rgb(255, 226, 165); text-align:center;">Ending Time</h2>
+            <textarea name="endtime" id="endtime" class="form-control task-textarea" style="height: 45px"></textarea>
+            <br>
+    
+            <h2 style="color:rgb(255, 226, 165); text-align:center;">Day of the Week</h2>
+            <textarea name="day" id="day" class="form-control task-textarea" style="height: 45px"></textarea>
+            <br>
+        <div align="center">
+            <button type="submit" onclick="window.location.href='calendar'" class="btn btn-primary" style="background-color:rgb(255, 226, 165); border-color:rgb(255, 226, 165); border-radius:10px;">Finalize</button>
+        </div>
     </form>
-    <form method="POST" style="height: 45; margin: 0 auto;">
-        <h2 style="color:rgb(255, 226, 165); text-align:center;">Starting Time</h2>
-        <textarea name="starttime" id="starttime" class="form-control task-textarea" style = "height: 45px"></textarea>
-        <br>
-    </form>
-    <form method="POST" style="height: 45; margin: 0 auto;">
-        <h2 style="color:rgb(255, 226, 165); text-align:center;">Ending Time</h2>
-        <textarea name="endtime" id="endtime" class="form-control task-textarea" style = "height: 45px"></textarea>
-        <br>
-    </form>
-    <form method="POST" style="height: 45; margin: 0 auto;">
-        <h2 style="color:rgb(255, 226, 165); text-align:center;">Day of the Week</h2>
-        <textarea name="day" id="day" class="form-control task-textarea" style = "height: 45px"></textarea>
-        <br>
-    </form>
-    <div align="center">
-        <button onclick="window.location.href='calendar'" class="btn btn-primary" style="background-color:rgb(255, 226, 165); border-color:rgb(255, 226, 165); border-radius:10px;">Finalize</button>
-    </div>
 </div>
 <style>
     .task-textarea {
