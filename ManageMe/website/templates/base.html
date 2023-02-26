@@ -41,12 +41,12 @@
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
           {% if user.is_authenticated %}
-          <a class="nav-item nav-link" id="welcome" href="/welcome">Home</a>
-          <a class="nav-item nav-link" id="home" href="/">Create</a>
+          <a class="nav-item nav-link" id="welcome" href="/">Home</a>
+          <a class="nav-item nav-link" id="home" href="/home">Create</a>
           <a class="nav-item nav-link" id="calendar" href="/calendar">Calendar</a>
           <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           {% else %}.
-          <a class="nav-item nav-link" id="welcome" href="/welcome">Home</a>
+          <a class="nav-item nav-link" id="welcome" href="/">Home</a>
           <a class="nav-item nav-link" id="login" href="/login">Login</a>
           <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
           {% endif %}

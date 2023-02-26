@@ -2,7 +2,7 @@ from website import create_app
 
 app = create_app()
 """"""
-@app.route('/')
+@app.route('/welcome')
 def start():
     return app
 
