@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ManageMe",
+    "\\ManageMe\\instance",
+    "\\ManageMe\\website",
+    "\\ManageMe\\website\\static",
+    "\\ManageMe\\website\\templates"
+  ],
+  "SelectedNode": "\\ManageMe\\website\\__init__.py",
+  "PreviewInSolutionExplorer": false
+}
