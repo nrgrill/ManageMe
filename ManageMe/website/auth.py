@@ -69,8 +69,3 @@ def sign_up():
 def calendar():
 
     return render_template("calendar.html", user=current_user)
-
-@auth.route('/welcome', methods=['GET', 'POST'])
-def welcome():
-
-    return render_template("welcome.html", user=current_user)
